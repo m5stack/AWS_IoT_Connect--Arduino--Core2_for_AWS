@@ -1,5 +1,5 @@
 /*
- * Core2 for AWS IoT EduKit
+ * Core2 for AWS IoT Kit
  * Arduino Basic Connectivity Example v1.0.1
  * main.cpp
  * 
@@ -172,7 +172,7 @@ void message_received_callback(int messageSize) {
 // key in establishing TLS and securing network messages.
 //
 // NOTE: The definitions for I2C are in the platformio.ini file and
-// not meant to be changed for the M5Stack Core2 for AWS IoT EduKit.
+// not meant to be changed for the M5Stack Core2 for AWS IoT Kit.
 void atecc608_init(){
   Wire.begin(ACTA_I2C_SDA_PIN, ACTA_I2C_SCL_PIN, ACTA_I2C_BAUD);
 
@@ -185,7 +185,7 @@ void atecc608_init(){
 }
 
 void setup() {
-  // Initialize the M5Stack Core2 for AWS IoT EduKit
+  // Initialize the M5Stack Core2 for AWS IoT Kit
   bool LCDEnable = true;
   bool SDEnable = true; 
   bool SerialEnable = true;
