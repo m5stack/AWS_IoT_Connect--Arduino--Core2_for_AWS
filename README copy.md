@@ -1,17 +1,17 @@
-# Basic AWS IoT Connectivity Arduino Example for the M5Stack Core2 for AWS IoT EduKit
+# Basic AWS IoT Connectivity Arduino Example for the M5Stack Core2 for AWS IoT Kit
 
-This is a basic AWS IoT connectivity example using the Arduino-style framework for Espressif MCU hardware on PlatformIO with the M5Stack Core2 ESP32 IoT Development Kit for AWS IoT EduKit (available on [Amazon.com](https://www.amazon.com/dp/B08VGRZYJR) or on the [M5Stack store](https://m5stack.com/products/m5stack-core2-esp32-iot-development-kit-for-aws-iot-edukit)). This example takes advantage of the on-board Microchip ATECC608 Trust&GO secure element that is pre-provisioned with a private key that can be used for connectivity to AWS IoT.
+This is a basic AWS IoT connectivity example using the Arduino-style framework for Espressif MCU hardware on PlatformIO with the M5Stack Core2 ESP32 IoT Development Kit for AWS IoT Kit (available on [Amazon.com](https://www.amazon.com/dp/B08VGRZYJR) or on the [M5Stack store](https://m5stack.com/products/m5stack-core2-esp32-iot-development-kit-for-aws-iot-kit)). This example takes advantage of the on-board Microchip ATECC608 Trust&GO secure element that is pre-provisioned with a private key that can be used for connectivity to AWS IoT.
 
-The AWS IoT EduKit program makes it easy to learn how to build end-to-end IoT applications using secure hardware, content, and code examples.
+The AWS IoT Kit program makes it easy to learn how to build end-to-end IoT applications using secure hardware, content, and code examples.
 
 The example provided connects to your Wi-Fi network, connects to AWS IoT Core, and publishes a simple message on the topic _<<DEVICE_SERIAL_NUMBER>>/_. With the device serial number being the unique serial number of the device, and also the MQTT client Id.
 
 ## How to use this example
-To use this example, you will need to complete the [Getting Started](https://edukit.workshop.aws/en/getting-started.html) and [Cloud Connected Blinky](https://edukit.workshop.aws/en/blinky-hello-world.html) tutorials first.
+To use this example, you will need to complete the [Getting Started](https://aws-iot-kit-docs.m5stack.com/en/getting-started/) and [Cloud Connected Blinky](https://aws-iot-kit-docs.m5stack.com/en/blinky-hello-world/) tutorials first.
 
 1) Open a new VSCode window and clone/open this repository. Navigate to the **Basic_Arduino/include/arduino_secrets.h** file and enter your Wi-Fi credentials in between the quotes, replacing the default values. Make sure to put the SSID to a 2.4GHz network. 5GHz is not supported by the hardware.
 
-2) Open the [PlatformIO CLI terminal window](https://edukit.workshop.aws/en/blinky-hello-world/prerequisites.html#open-the-platformio-cli-terminal-window) and retrieve your AWS IoT endpoint address with the AWS CLI using the code below. Copy and paste it into the **Basic_Arduino/include/arduino_secrets.h** file to define the **AWS_IOT_ENDPOINT_ADDRESS**.
+2) Open the [PlatformIO CLI terminal window](https://aws-iot-kit-docs.m5stack.com/en/blinky-hello-world/prerequisites/#open-the-platformio-cli-terminal-window) and retrieve your AWS IoT endpoint address with the AWS CLI using the code below. Copy and paste it into the **Basic_Arduino/include/arduino_secrets.h** file to define the **AWS_IOT_ENDPOINT_ADDRESS**.
     
     ```bash
     aws iot describe-endpoint --endpoint-type iot:Data-ATS
